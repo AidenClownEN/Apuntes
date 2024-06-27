@@ -1,0 +1,19 @@
+                                                                       # Directorio /dev #
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El sistema operativo Gnu-Linux trata los dispositivos de hardware como si gueran un archivo. Estos archivos que representan nuestros dispositivos de hardware  se hallan   |
+| almacenados en el directorio /dev                                                                                                                                          |
+|                                                                                                                                                                            |
+| Algunos archivos basicos que podemos encontrar en este directorio son:                                                                                                     |
+|                                                                                                                                                                            |
+| - cdrom : que representa nuestro dispoditivo CDROM.                                                                                                                        |
+|                                                                                                                                                                            |
+| - sda : que representa nuestro disco duro sata.                                                                                                                            |
+|                                                                                                                                                                            |
+| - audio : que representa nuestra tarjeta de sonido.                                                                                                                        |
+|                                                                                                                                                                            |
+| - psaux : que representa el puerto PS/2.                                                                                                                                   |
+|                                                                                                                                                                            |
+| - ipx : que representa nuestra impresora.                                                                                                                                  |
+|                                                                                                                                                                            |
+| - fd0 : que representa nuestra disquetera.                                                                                                                                 |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

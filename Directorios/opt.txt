@@ -1,0 +1,5 @@
+                                                                        # Directorio /opt #
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El contenido almacenado en el directorio /opt es estatico y compartible. La funcion de este directorio es almacenar programas que no vienen con nuestro sistema operativo--|
+| como por ejemplo spotify, google-earth, Google Chrome, Teamviewer, etc..                                                                                                   |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

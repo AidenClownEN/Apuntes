@@ -1,0 +1,8 @@
+                                                                        # Directorio /etc #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El directorio /etc es un directorio estatico que contiene los archivos de configuracion del sistema operativo. Este directorio tambien contiene archivos de configuracion   |
+|                                                                                                                                                                             |
+| para controlar el funcionamiento de diversos programas.                                                                                                                     |
+|                                                                                                                                                                             |
+| Algunos de los archivos de configuracion de la carpeta /etc pueden ser sustituidos o complementados por archivos de configuracion ubicados en nuestra carpeta personal /home|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

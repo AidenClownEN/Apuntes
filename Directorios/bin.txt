@@ -1,0 +1,7 @@
+                                                                          # Directorio /bin #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                                              |
+| El directorio /bin es un directorio estatico y compartible en el que se almacenan archivos de Binarios / ejecutables necesarios para el funcionamiento del sistema           |
+| Estos archivos binarios los pueden usar la totalidad de usuarios del sistema operativo.                                                                                      |
+|                                                                                                                                                                              |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

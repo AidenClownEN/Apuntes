@@ -1,0 +1,5 @@
+                                                                        # Directorio /lib #
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El directorio /lib es un directorio estatico y que puede ser compartible. Este directorio contiene bibliotecas compartidas que son necesarias para arrancar los ejecutables   |
+| que se almacenan en los directorios /bin y /sbin.                                                                                                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

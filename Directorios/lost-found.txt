@@ -1,0 +1,8 @@
+                                                                        # Directorio Lost-found #
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| directorio que se crea en las particiones de disco con un sistema de archivos ext despues de ejecutar herramientas para restaurar y recuperar el sistema operativo como por ejemplo  |
+| fsch.                                                                                                                                                                                |
+|                                                                                                                                                                                      |
+| Si nuestro sistema no ha presentado problemas este directorio estara completamente vacio. en el caso que hayan habido problemas este directorio contandra ficheros y directorios que |
+| han sido recuperados tras la caida del sistema operativo                                                                                                                             |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

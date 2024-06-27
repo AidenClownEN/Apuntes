@@ -1,0 +1,6 @@
+                                                                        # Directorio /boot #
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Es un directorio estatico no compartible que contiene la totalidad de archivos necesarios para el arranque del ordenador excepto los archivos de configuracion.         |
+| Algunos de los archivos indispensables para el arranque del sistema que acostumbra a almacenar el directorio /boot son el kernel (nucleo de la maquina) y el gestor     |
+| de arranque Grub                                                                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

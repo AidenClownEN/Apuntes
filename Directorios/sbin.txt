@@ -1,0 +1,5 @@
+                                                                        # directorio sbin #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| El directorio /sbin se trata de un directorio estatico y compartible. su funcion es similar un directorio /bin, pero a diferencia del directorio /bin, el directorio /sbin almacena  |
+| archivos binarios/ejecutables que solo puede ejecutar el usuario root o administrador del sistema.                                                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

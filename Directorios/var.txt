@@ -1,0 +1,8 @@
+                                                                        # Directorio var #
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /var contiene los archivos de datos variables y temporales como por ejemplo los registros del sistema (logs), los registros de programas que tenemos instalados        |
+| en el sistema operativo, los archivos spool, etc..                                                                                                                                   |
+|                                                                                                                                                                                      |
+| la principal funcion del directorio /var es la de detectar problemas y solucionarlos .Se recomienda ubicar el directorio /var en una particion propia, y en caso de no ser posible   |
+| es recomendable ubicarlo fuera de la particion raiz.                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

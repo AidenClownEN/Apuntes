@@ -1,0 +1,5 @@
+                                                                        # Directorio /media #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| La funcion del directorio /media es similar a la del directorio /mnt. Este directorio contiene los puntos de montaje de los medios extraibles de almacenamiento             |
+| como por ejemplo memorias USB, lectores de CD-ROM, unidades de disquete, etc..                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

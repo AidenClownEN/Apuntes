@@ -1,0 +1,6 @@
+                                                                        # Directorio usr #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El directorio /usr es un directorio compartido y estatico. Este directorio es el que contiene la gran mayoria de programas instalados en nuestro sistema operativo           |
+|                                                                                                                                                                              |
+| Todo el contenido almacenado en la carpeta /usr es accesible para todos los usuarios y su contenido es solo de lectura                                                       |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

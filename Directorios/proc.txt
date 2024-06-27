@@ -1,0 +1,5 @@
+                                                                        # Directorio proc #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| El directrio /proc se trata de un sistema de archivos virtual. este sistema de archivos no proporciona informacion acerca de los distintos procesos y aplicaciones                |
+| que se estan ejecutando en nuestro sistema operativo                                                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,0 +1,5 @@
+                                                                        # directorio sys #
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Directorio que contiene informacion similar a la del directorio /proc, dentro de esta carpeta podemos encontrar informacion estructurada y jerarquica acerca del kernel         |
+| de nuestro equipo, de nuestras particiones y sistema de archivo, de nuestros driver, etc                                                                                        |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

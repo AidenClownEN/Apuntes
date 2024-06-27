@@ -1,0 +1,118 @@
+                                                                          # directorio /bin #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                                              |
+| el directorio /bin es un directorio estatico y compartible en el que se almacenan archivos de binarios / ejecutables necesarios para el funcionamiento del sistema           |
+| estos archivos binarios los pueden usar la totalidad de usuarios del sistema operativo.                                                                                      |
+|                                                                                                                                                                              |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /boot #
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| es un directorio estatico no compartible que contiene la totalidad de archivos necesarios para el arranque del ordenador excepto los archivos de configuracion.         |
+| algunos de los archivos indispensables para el arranque del sistema que acostumbra a almacenar el directorio /boot son el kernel (nucleo de la maquina) y el gestor     |
+| de arranque grub                                                                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                       # directorio /dev #
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el sistema operativo gnu-linux trata los dispositivos de hardware como si gueran un archivo. estos archivos que representan nuestros dispositivos de hardware  se hallan   |
+| almacenados en el directorio /dev                                                                                                                                          |
+|                                                                                                                                                                            |
+| algunos archivos basicos que podemos encontrar en este directorio son:                                                                                                     |
+|                                                                                                                                                                            |
+| - cdrom : que representa nuestro dispoditivo cdrom.                                                                                                                        |
+|                                                                                                                                                                            |
+| - sda : que representa nuestro disco duro sata.                                                                                                                            |
+|                                                                                                                                                                            |
+| - audio : que representa nuestra tarjeta de sonido.                                                                                                                        |
+|                                                                                                                                                                            |
+| - psaux : que representa el puerto ps/2.                                                                                                                                   |
+|                                                                                                                                                                            |
+| - ipx : que representa nuestra impresora.                                                                                                                                  |
+|                                                                                                                                                                            |
+| - fd0 : que representa nuestra disquetera.                                                                                                                                 |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /etc #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /etc es un directorio estatico que contiene los archivos de configuracion del sistema operativo. este directorio tambien contiene archivos de configuracion   |
+|                                                                                                                                                                             |
+| para controlar el funcionamiento de diversos programas.                                                                                                                     |
+|                                                                                                                                                                             |
+| algunos de los archivos de configuracion de la carpeta /etc pueden ser sustituidos o complementados por archivos de configuracion ubicados en nuestra carpeta personal /home|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /home #
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|el directorio /home se trata de un directorio variable y compartible. este directorio esta destinado a alojar la totalidad de archivos personales de los distintos usuarios del |
+|sistema operativo a excepcion del usuario root.                                                                                                                                 |
+|algunos de los archivos personales almacenados en la carpeta /home son fotografias, documentos de ofimatica, videos, etc..                                                      |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+                                                                        # directorio /lib #
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /lib es un directorio estatico y que puede ser compartible. este directorio contiene bibliotecas compartidas que son necesarias para arrancar los ejecutables   |
+| que se almacenan en los directorios /bin y /sbin.                                                                                                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio lost-found #
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| directorio que se crea en las particiones de disco con un sistema de archivos ext despues de ejecutar herramientas para restaurar y recuperar el sistema operativo como por ejemplo  |
+| fsch.                                                                                                                                                                                |
+|                                                                                                                                                                                      |
+| si nuestro sistema no ha presentado problemas este directorio estara completamente vacio. en el caso que hayan habido problemas este directorio contandra ficheros y directorios que |
+| han sido recuperados tras la caida del sistema operativo                                                                                                                             |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /media #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| la funcion del directorio /media es similar a la del directorio /mnt. este directorio contiene los puntos de montaje de los medios extraibles de almacenamiento             |
+| como por ejemplo memorias usb, lectores de cd-rom, unidades de disquete, etc..                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /mnt #
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /mnt tiene la finalidad de albergar los puntos de montaje de los distintos dispositivos de almacenamiento como por ejemplo los discos duros externos               | 
+| particiones de unidades externas, etc...                                                                                                                                         |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio /opt #
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el contenido almacenado en el directorio /opt es estatico y compartible. la funcion de este directorio es almacenar programas que no vienen con nuestro sistema operativo--|
+| como por ejemplo spotify, google-earth, google chrome, teamviewer, etc..                                                                                                   |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio proc #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directrio /proc se trata de un sistema de archivos virtual. este sistema de archivos no proporciona informacion acerca de los distintos procesos y aplicaciones                |
+| que se estan ejecutando en nuestro sistema operativo                                                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio root #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /root se trata de un directorio variable no compartible. el directorio /root es el directorio /home del administrador del sistema (root)     |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio sbin #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| el directorio /sbin se trata de un directorio estatico y compartible. su funcion es similar un directorio /bin, pero a diferencia del directorio /bin, el directorio /sbin almacena  |
+| archivos binarios/ejecutables que solo puede ejecutar el usuario root o administrador del sistema.                                                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio srv #
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /srv se usa para almacenar directorios y datos que usan ciertos servidores que podamos tener instalados en nuestro ordenador.         |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio sys #
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| directorio que contiene informacion similar a la del directorio /proc, dentro de esta carpeta podemos encontrar informacion estructurada y jerarquica acerca del kernel         |
+| de nuestro equipo, de nuestras particiones y sistema de archivo, de nuestros driver, etc                                                                                        |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio tmp #
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /tmp es odnde se crean y se almacenan los archivos temporales y las variables para que los programas puedan funcionar de forma adecuada         |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio usr #
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /usr es un directorio compartido y estatico. este directorio es el que contiene la gran mayoria de programas instalados en nuestro sistema operativo           |
+|                                                                                                                                                                              |
+| todo el contenido almacenado en la carpeta /usr es accesible para todos los usuarios y su contenido es solo de lectura                                                       |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                                        # directorio var #
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| el directorio /var contiene los archivos de datos variables y temporales como por ejemplo los registros del sistema (logs), los registros de programas que tenemos instalados        |
+| en el sistema operativo, los archivos spool, etc..                                                                                                                                   |
+|                                                                                                                                                                                      |
+| la principal funcion del directorio /var es la de detectar problemas y solucionarlos .se recomienda ubicar el directorio /var en una particion propia, y en caso de no ser posible   |
+| es recomendable ubicarlo fuera de la particion raiz.                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
