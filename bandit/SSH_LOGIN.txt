@@ -1,0 +1,21 @@
+# Como ingresar en un servidor remoto por ssh #
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+Utilizaremos el comando " ssh " usuario@servidor -p 2220
+
+ssh = funcion que nos permite conectarnos a un servidor remoto
+
+usuraio = numbre de usuario con el que nos vamos a conectar
+
+@servidor = direccion del servidor remoto a conectarse por ejemplo (bandit.labs.overthewire.org)
+
+-p = con esto le decimos a la maquina que queremos entrar por un puerto en especifico 
+
+2220 =  es el puerto que el servidor de bandit nos proporciona pero podriamos utilizar otro si savemos que este es vulnerable 
+
+# podemos poner a parte sshpass -p 'contraseña' ssh bandit0@bandit.labs.overthewire.org -p 2220
+ 
+ y asi no tendremos que escribir la contraseña a parte.
+
+

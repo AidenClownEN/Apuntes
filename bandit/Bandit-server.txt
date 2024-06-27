@@ -1,0 +1,7 @@
+# Bandit-Server# https://overthewire.org/wargames/bandit/
+ 
+sshpass -p 'bandit0' ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+(Para que nos permita utilizar funciones como cntrl l para limpiar pantalla:
+debemos poner el comando $ export TERM=xterm
+y no deberiamos tener problemas)

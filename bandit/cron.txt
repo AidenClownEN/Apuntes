@@ -1,0 +1,36 @@
+# CRON # https://www.site24x7.com/es/tools/crontab/cron-generator.html
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+cron es un administrador de tareas linux que permite ejecutar comandos en un momento determinado, por ejemplo cada minuto, dia, semana, mes. 
+Si queremos trabajar con cron, podemos hacerlo a traves del comando crontab.
+
+El formato de configuracion de cron es el siguiente : Minuto Hora Dia-del-mes Mes Dia-de-la-semana Comando-a-ejecutar
+
+El intervalo de tiempo se especifica mediante 5 campos que representan, de izquierda a derecha:
+
+-Minutos: de 0 a 59.
+
+-Horas: de 0 a 23.
+
+-Día del mes: de 1 a 31.
+
+-Mes: de 1 a 12.
+
+-Día de la semana: de 1 a 6 lunes a sábado (1=lunes, 2=martes, etc.) y 0 o 7 el domingo.
+
+podemos especificar todos los valores posibles de un parametro cambiando el numero por un (*) poniendo esto podemos decir por ejemplo que se ejecute cada mes o cada minuto o cada dia
+de la semana.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* * * * * = el scrip se ejecutara cada minuto todos los dias
+
+10 * * * * = el script se ejecutara cada 10 minutos todos los dias 
+
+10 22 * * * = el script se ejecutara a las 22:10 todos los dias
+
+10 22 01 * * = el script se ejecutara a las 22:10 del dia 1 de cada mes todos los meses
+
+10 22 01 09 * = el script se ejecutara cada 1 de Septiembre a las 22:10
+
+10 22 01 09 5 = el script se ejecutara cada 1 de Septiembre a las 22:10 y que sea viernes

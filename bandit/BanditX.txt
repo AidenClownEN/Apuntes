@@ -1,0 +1,229 @@
+# PROGRESO CON USUARIOS BanditX #
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Directorio password = /etc/bandit_pass
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-bandit0 = bandit0
+
+(como bandit0 : tuvimos que leer archivo de nombre " - " Lo hicimos usando " cat ./- " tambien podriamos haber usado " cat ~/* ")
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit1 = NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL / ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+(como bandit1 : tuvimos que leer archivo de nombre " - " Lo hicimos usando " cat ./- " tambien podriamos haber usado " cat ~/* "
+  Para conseguir bandit2)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-bandit2 = rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi / 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+(como bandit2 : tuvimos que leer un directorio que en el nombre contenia espacios, lo hicimos con " cat ~/s + tab para rellenar " 
+  pudimos usar " cat ./* " o " cat spaces\ in\ this\ filename " para obviar los espacios o " cat "spaces in this filename" para decirle que el nombre es con espacios " 
+  Para conseguir bandit3)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-bandit3 = aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG / MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+(como bandit3 : tuvimos que entrar con cd a un directorio y listar con ls -a para mostrar directorios o archivos ocultos viendo la existencia de .hidden mostramos su interior con 
+cat ./.hidden y hallamos la contraseña para bandit4)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit4 = 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe /2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+(Como bandit4 : tenemos que encontrar la pass en el unico archivo legible, utilizamos el comando "find . -type f | grep "\-file" | xargs file" para buscar:
+un archivo tipo archivo | filtramos por la palabra "\-file" | decimos que aparte nos liste tipos de archivos existente 
+y la maquina nos devuelve una lista de archivos que muestran data y un unico archivo que es "ASCII text" contiene texto legible lo miramos con cat y hallamos la contraseña de bandit5)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit5 = lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR /4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+(como bandit5 : sabemos que la contraseña se encuentra en algun archivo legible no ejecutable y que pesa 1033g usamos comando 
+"find . -type f -size 1033c " con esto buscamos archivos con tamaño 1033g partiendo del directorio actual)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit6 = P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU /HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+(como bandit6 = sabemos que la contraseña se encuentra en un archivo cuyo propietario es bandit7 y el grupo asignado es bandit6 y sabemos que el archivo pesa 33g
+utilizamos el comando find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null y hayamos el archivo "/var/lib/dpkg/info/bandit7.password" lo abrimos con cat y encontramos
+la contraseña de bandit7 )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit7 = z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S / morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+(como bandit7 = sabemos que la contraseña se encuentra en el archivo de texto data.txt al lado de la palabra millonth utilizamos el comando 
+cat -n data.txt | grep "millionth" con esto decimos que queremos leer el archivo data.txt mostrando numeros de lineas | filtrando la palabra "millionth"
+y encontramos la contraseña)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit8 = TESKZC0XvTetK0S9xNwm25STk5iWrBvP / dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+(como bandit8 = sabemos que la contraseña esta dentro del archivo de texto data.txt y que es la unica linea que no se repite 
+- con el comando "sort" - podemos ordenar alfabeticamente el contenido de un archivo y asi veriamos si a primera vista hay algo que no se repite 
+  pero teniendo mucha data no es rentable buscarlo asi.
+- con el comando "uniq" podemos filtrar por el numero de veces que se repite una linea de texto  uniq -u es para lineas que son unicas solo salen una vez
+
+asi que utilizamos el comando $ cat data.txt | uniq -u 
+  y vemos la contraseña del siguiente nivel)
+https://www.ibidemgroup.com/edu/tutorial-sort-linux-unix/ (Comando sort)
+https://victorhckinthefreeworld.com/2021/10/21/el-comando-uniq-de-gnu/ (comando uniq)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit9 = EN632PlfYiZbn3PhVK3XOGSlNInNE00t / 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+(como bandit9 = sabemos que la contraseña esta en un archivo de texto data.txt que no tiene cadenas legibles para un humano y que esta al lado de multiples "=" 
+con cat poco podemos hacer ya que no vamos a poder leer nada 
+
+Por lo que buscamos con el comando " string " esto sirve para buscar cadenas de texto legibles dentro de un archivo
+
+$ strings data.txt | grep "===" (con esto buscamos cadenas de texto legibles filtrando por multiples "=") y hayamos la contraseña de bandit10)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit10 = G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s / FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+(Desde bandit10 = dabemos que la contraseña se encuentra encriptada bajo un archivo data.txt con base 64 asi que utilizamos el comando "base64" para desencriptar el archivo 
+utilizamos pues el comando: "cat data.txt | base64 " claro el problema de esto es que estariamos encriptando aun mas el codigo para realmente desencriptarlo tendriamos que usar 
+"cat data.txt | base64 -d " ese "-d" va a darle la vuelta dejandolo en texto claro y ahi vemos la contraseña de bandit11)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit11 = 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM / dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+(desde bandit11 = sabemos que la contraseña se encuentra en data.txt pero que las letras furon rotadas con el cifrado de J.Cesar valiendo cada letra 13 posiciones menos 
+la " A " seria " N "  la " B " seria " O " etc.. para volver el texto a la normalidad podemos utilizar rot13.com que es una pagina que revierte este proceso y puedes elegir el numero
+de rotacion o
+podemos usar el comando " cat data.txt | tr "[A-Za-z]" "[N-ZA-Mn-za-m]" con esto le decimos tr para tranformar "[primera cadena]" "[segunda cadena]"
+[en la primera cadena ponemos los limites A-Z y de la a-z para que lo haga con mayusculas y con minusculas]
+[en la segunda cadena le decimos que la "A" de la primera cadena vale "N" que es la 13ava en la rotacion y marcamos hasta la Z "N-Z" despues completamos desde la A hasta la M
+quedando esto asi " N-ZA-M " lo ponemos en minusculas tambien "n-za-m" y con eso completamos las dos cadenas con sus rotaciones] y al pasar esto por el texto sacamos la contraseña)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit12 = JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv / 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+(como bandit12 = sabemos que la contraseña esta en un archivo data.txt que esta cifrado son hexadecimal para resolver este problema utilizamos " xxd -r "
+este comando sirve para cifrar como descifrar texto a hexadecimal "xxd" para cifrar "xxd -r " para hacer la reversa y decodificarlo 
+
+luego sabemos que tenemos un archivo comprimido varias veces para ver el archivo usamos "file nombreDeArchivo" para listar lo que hay dentro "7z l nombreDeArchivo" y para descomprimirlo "7z x nombredeArchivo" creamos una script para automatizar el proceso la script se encuentra en /home/aidenclown/Desktop/Curso_Hack4you/SSH_CURSO/Bandit_13_script bajo el nombre 
+decompressor.sh al terminar el proceso vemos un archivo data9.bin que es archivo de texto y contiene la contraseñ apara bandit.13)
+ )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+bandit13 = wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw / FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+(Como bandit13 sabemos que la contraseña esta en el directorio /etc/bandit_pass/bandit14 y no podemos acceder por que el directorio esta resevado pàra bandit14 pero nos dan una clave de pares publica para que podamos acceder por lo que usamos el comando ssh -i sshkey.private bandit14@localhost -p2220 
+
+ssh = la funcion ssh como la que usamos para entrar en los servidores 
+
+-i = para pasarle la clave id publica o privada 
+
+sshkey.private = es el archivo donde esta almacenada la clave 
+
+bandit14@localhost = bandit14 es el usuario con el que nos queremos conectar al servidor y localhost es el servidor (en este caso la propia maquina)
+
+-p2220 = -p es para decir por que puerto queremos entrar y 2220 es el puerto que en este caso esta abierto
+
+y ya conectados como bandit14 vemos en el directorio /etc/bandit_pass en el archivo bandit14 la contraseña)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit14 = fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq / MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+(como bandit14 sabemos que el puerto 30000 esta abierto y que pide una contraseña anterior (la de bandit14) para ofrecernos la contraseña siguiente 
+utilizamos el comando nc localhost 30000, nos pide contraseña le damos la anterior y nos da la de usr bandit15 
+
+nc= netcat un "programa" parta poder ponernos en escuha por algun puerto abierto 
+
+localhost = la maquina a la que nos queremos conectar 
+
+30000 = el puerto por el que nos queremos conectar)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit15 = jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt / 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+(como bandit15 sabemos que la contraseña nos la dan al ponernos en escucha por el puerto 30001 al localhost pero la informacion en este caso la ocntraseña actual que tenemos que proporcionar debe viajar encriptada por lo que en vex de "nc" vamos a utilizar " ncat " por que tiene un parametro " --ssl " que encripta la informacion 
+ponemos el comando $ ncat --ssl localhost 30001  nos pide la contraseña del nivel en el que estamos se la damos y nos devuelve la contraseña siguiente para bandit16)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit16 =  kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+(como bandit16 sabemos que la contraseña la tenemos que conseguir conectandonos como anteriormente como bandit17 y la clave privada nos la dan por un puerto abierto entre el 31000 y
+el 32000 podemos usar "nmap --open -T5 -v -n -p31000-32000 127.0.0.1" o crear un script que nos localice los puertos abiertos del sistema mandando cadenas vacias a los puertos
+despues creamos el archivo "id_sra" donde guardaremos la clave privada obtenida y usamos "ssh -i id_sra bandit17@localhost -p 2220" para acceder como bandit17 y en la ruta /etc/bandit_pass en el archivo bandit17 encontramos la contraseña )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit17 = EReVavePLFHtFlFsjn3hyzMlvSuSAcRD  
+(Como bandit17 sabemos que la contraseña esta en la unica linea que ha sido traspasada de password.old a password.new 
+utilizamos el comando ""diff" y sacamos la nueva contraseña
+$ diff password.old password.new)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit18 = x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+(Como bandit18 sabemos que la contraseña se encuentra en el archivo readme del home de bandit18 pero al intentar conectarnos nos echa del sistema por que el archivo .bashrc esta modificado por lo que al conectarnos debemos inyectar un comando al ver que funciona el comando antes del .bashrc probamos a inyectar una bash y conseguimos acceso
+$ sshpass -p 'x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO' ssh bandit18@bandit.labs.overthewire.org -p 2220 bash  y en el archivo readme vemos la contraseña de bandit19)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit19 = cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+(como bandit 19 sabemos que la contraseña esta en /etc/bandit_pass/bandit20 pero solo lo puede ver el propietario bandit20 vemos que tenemos un binario con permisos SUID inyectamos un comando para sacar una bash o un sh y nos la da siendo bandit20 ya podemos acceder a la carpeta donde se encuentra la contraseña
+$ ./bandit20-do sh  || ./bandit20-do bash -p (-p lo ponemos para hacer referencia a los permisos SUID))
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit20 = 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
+(como bandit20 sabemos que la contraseña nos la otorga un puerto al inyectar la contraseña anterior el problema es que no hay ningun puerto abierto que nos permita meter data
+asi que utilizamos una segunda consola con usr bandit20 y usamos el comando $ nc -nlvp 4646 (4646 por ejemplo, este es el numero de puerto que usamos pero podemos poner otro
+-nlvp
+n = para que no aplique resolucion DNS
+l = listen para ponernos en escucha
+v = para actival el verbose y que nos reporte todo lo que vaya haciendo por consola 
+p = puerto para poder indicar puerto al que nos queremos conectar )
+
+y inyectamos la contraseña y nos devuelve la nueva )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit21 = EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+(como bandit21 sabemos que la contraseña se encuntra bajo un ejecutable cron que se encuentra en la carpeta /etc/cron.d$ donde cada minuto se ejecuta el binario cronjob_bandit22.sh
+que se encuentra en la carpeta /usr/bin/cronjob_bandit22.sh al ver que tiene ese binario programado vemos que hace un "chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv "
+y al ver con cat lo que hay en esa ruta vemos la contraseña de bandit22)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit22 = tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+(Como bandit22 vemos que en el directorio /etc/cron.d se ejecuta un script cada minuto al ver el script vemos que tiene dos variables myname=$(whoami) y 
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1) luego vemos que con un cat coge la contraseña de bandit23(que es la respuesta del whoami) y lo redirige al directorio 
+/tmp/$mytarget (que es el hash creado) al hacerle un cat a /tmp/8ca319486bfbbc3663ea0fbe81326349 (que es el hash) nos da la contraseña de bandit23 )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit23 = 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+(como bandit23 sabemos que en /etc/cron.d se ejecuta un script al verlo detectamos que el script ejecuta y elimina todos los scripts en la carpeta var/spool/bandit24/foo/ asi que nos creamos un directorio temporal y en este hacemos un script le damos permisos de ejecucion y de lectura y ejecucion al directorio temp 
+en el script ponemos "cat /etc/bandit_pass/bandit24 > /tmp/tmp.CUSAHg61NW/bandi24_pass.log
+                      chmod o+r /tmp/tmp.CUSAHg61NW/bandit24_pass.log " 
+
+luego con cp que significa copy pasamos el script a la carpeta /var/spool/bandit24/foo/prueba "prueba es el archivo donde queremos que este el script" y 
+con el comando watch -n1 ls -l nos ponemos en escucha hasta que se cree el archivo donde se mandara la contraseña y podemos ver la contraseña de bandit24)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit24 = gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+(como bandit24 sabemos que hay un demonio que por el puerto 30002 si le das la contraseña y un ping de 4 digitos te da la contraseña de bandit 25 
+
+con "for" podemos crear una iteracion que pruebe las 9999 posibilidades "for ping in {0000..9999}; do echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $ping"; done "
+y lo que reporte por consola lo pasamos a un archivo .txt con > Archivo.txt
+
+luego hacemos un "cat Archivo.txt | nc localhost 30002" y cuando llegue al ping correcto nos devolvera la contraseña de bandit 25)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-bandit25 = iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+
